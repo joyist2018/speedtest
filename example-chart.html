@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>HTML5 Speedtest</title>
+    <title>HTML5 测速|Speedtest</title>
     <style type="text/css">
         html,
         body {
@@ -239,17 +239,18 @@
 </head>
 
 <body>
-    <h1>HTML Speedtest - Chart.js example</h1>
+    <h1><a class="three columns game" href="index.html">返回</a></h1>
+    <h1>HTML 图表测速 - Chart.js 实例</h1>
     <div id="testArea" style="display:none">
-        <p id="ip">Please wait...</p>
+        <p id="ip">请稍等|Please wait...</p>
 
-        <h2>Speed</h2>
+        <h2>速率|Speed</h2>
         <canvas id="chart1Area"></canvas>
 
-        <h2>Latency</h2>
+        <h2>延迟|Latency</h2>
         <canvas id="chart2Area"></canvas>
         <br/>
-        <a href="javascript:abortTest()" id="abortBtn">Abort</a>
+        <a href="javascript:abortTest()" id="abortBtn">中止|Abort</a>
     </div>
     <a href="javascript:runTest()" id="startBtn">Run speedtest</a>
     <br/><br/> Charts by <a href="http://www.chartjs.org/">Chart.js</a><br/><br/><a href="https://github.com/adolfintel/speedtest">Source code</a>
