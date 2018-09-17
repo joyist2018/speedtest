@@ -6,31 +6,31 @@
 </head>
 
 <body>
-    <h1>HTML5 Speedtest</h1>
+    <h1>HTML5 测速|Speedtest</h1>
 
-    <h4>IP Address</h4>
+    <h4>IP 地址|Address</h4>
     <p id="ip"></p>
 
-    <h4>Download</h4>
+    <h4>下载|Download</h4>
     <p id="download"></p>
 
-    <h4>Upload</h4>
+    <h4>上传|Upload</h4>
     <p id="upload"></p>
 
-    <h4>Latency</h4>
+    <h4>延迟|Latency</h4>
     <p id="ping"></p>
 
     <script type="text/javascript">
-        var w = new Worker('speedtest_worker.min.js') // create new worker
-        setInterval(function () { w.postMessage('status') }, 100) // ask for status every 100ms
-        w.onmessage = function (event) { // when status is received, split the string and put the values in the appropriate fields
-            var data = JSON.parse(event.data); //fetch speedtest worker output
+        var w = new Worker('speedtest_worker.min.js') // 创建新的工作
+        setInterval(function () { w.postMessage('status') }, 100) // 每100ms询问一次状态
+        w.onmessage = function (event) { // 收到状态时，拆分字符串并将值放在适当的字段中
+            var data = JSON.parse(event.data); //获取speedtest工作输出
             document.getElementById('download').textContent = data.dlStatus + ' Mbit/s'
             document.getElementById('upload').textContent = data.ulStatus + ' Mbit/s'
             document.getElementById('ping').textContent = data.pingStatus + ' ms, ' + data.jitterStatus + ' ms jitter'
             document.getElementById('ip').textContent = data.clientIp
         }
-        w.postMessage('start') // start the speedtest (default params. keep garbage.php and empty.dat in the same directory as the js file)
+        w.postMessage('start') // 启动speedtest（默认参数。将garbage.php和empty.dat保存在与js文件相同的目录中）
     </script>
 
 	<a href="https://github.com/adolfintel/speedtest">Source code</a>
