@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
-<title>HTML5 Speedtest</title>
+<title>HTML5 测速|Speedtest</title>
 <style type="text/css">
 	html,body{
 		border:none; padding:0; margin:0;
@@ -156,17 +156,18 @@ function initUI(){
 </script>
 </head>
 <body>
-<h1>HTML5 Speedtest - Telemetry example</h1>
+    <h1><a class="three columns game" href="index.html">返回</a></h1>
+<h1>HTML5 Speedtest - 遥测示例 - Telemetry example</h1>
 <div id="startStopBtn" onclick="startStop()"></div>
 <div id="test">
 	<div class="testGroup">
 		<div class="testArea">
-			<div class="testName">Download</div>
+			<div class="testName">下载|Download</div>
 			<div id="dlText" class="meterText"></div>
 			<div class="unit">Mbps</div>
 		</div>
 		<div class="testArea">
-			<div class="testName">Upload</div>
+			<div class="testName">上传|Upload</div>
 			<div id="ulText" class="meterText"></div>
 			<div class="unit">Mbps</div>
 		</div>
@@ -178,16 +179,18 @@ function initUI(){
 			<div class="unit">ms</div>
 		</div>
 		<div class="testArea">
-			<div class="testName">Jitter</div>
+			<div class="testName">抖动|Jitter</div>
 			<div id="jitText" class="meterText"></div>
 			<div class="unit">ms</div>
 		</div>
 	</div>
 	<div id="ipArea">
-		IP Address: <span id="ip"></span>
+		IP 地址|Address: <span id="ip"></span>
 	</div>
 </div>
-<div>Basic telemetry is active; results will be saved in your database, without the full log. If the results don't appear, check the settings in telemetry_settings.php</div>
+<div>基本遥测是有效的; 结果将保存在您的数据库中，没有完整的日志。 如果未显示结果，请检查telemetry_settings.php中的设置
+    <br>
+    Basic telemetry is active; results will be saved in your database, without the full log. If the results don't appear, check the settings in telemetry_settings.php</div>
 <a href="https://github.com/adolfintel/speedtest">Source code</a>
 <script type="text/javascript">initUI();</script>
 </body>
