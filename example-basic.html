@@ -6,6 +6,9 @@
 </head>
 
 <body>
+    
+<h1><a class="three columns game" href="../">返回</a></h1>
+
     <h1>HTML5 测速|Speedtest</h1>
 
     <h4>IP 地址|Address</h4>
@@ -27,7 +30,7 @@
             var data = JSON.parse(event.data); //获取speedtest工作输出
             document.getElementById('download').textContent = data.dlStatus + ' Mbit/s'
             document.getElementById('upload').textContent = data.ulStatus + ' Mbit/s'
-            document.getElementById('ping').textContent = data.pingStatus + ' ms, ' + data.jitterStatus + ' ms jitter'
+            document.getElementById('ping').textContent = data.pingStatus + ' ms, ' + data.jitterStatus + ' ms 波动|jitter'
             document.getElementById('ip').textContent = data.clientIp
         }
         w.postMessage('start') // 启动speedtest（默认参数。将garbage.php和empty.dat保存在与js文件相同的目录中）
